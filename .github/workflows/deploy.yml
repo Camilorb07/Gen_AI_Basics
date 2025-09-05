@@ -3,6 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -22,13 +23,14 @@ jobs:
         with:
           node-version: 20
           cache: npm
+      - uses: actions/configure-pages@v5
       - run: npm ci
       - run: npm run build
-      # If you use client-side routing, uncomment the next line so refreshes work:
-      # - run: cp dist/index.html dist/404.html
+      - run: cp dist/index.html dist/404.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -38,3 +40,4 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
