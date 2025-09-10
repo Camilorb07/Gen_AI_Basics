@@ -40,12 +40,12 @@ export const quizQuestions: QuizQuestion[] = [
       text: 'In the 2010s, what new method helped computers understand the meaning of words?',
       type: 'multiple-choice',
       options: [
-        'Representing words as numbers that capture meaning (word embeddings)',
-        'Translating text directly between languages',
         'Storing words as dictionary definitions',
+        'Translating text directly between languages',
+        'Representing words as numbers that capture meaning (word embeddings)',
         'Counting how many times each word appears'
       ],
-      correctAnswer: 'A'
+      correctAnswer: 'C'
     },
     answerExplanation: {
       correctAnswer: 'A. Word embeddings',
