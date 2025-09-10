@@ -48,7 +48,7 @@ export const quizQuestions: QuizQuestion[] = [
       correctAnswer: 'C'
     },
     answerExplanation: {
-      correctAnswer: 'A. Word embeddings',
+      correctAnswer: 'C. Word embeddings',
       details: [
         'In the early 2010s, models like Word2Vec (2013) and GloVe (2014) introduced word embeddings.',
         'Word embeddings represent each word as a vector of numbers.',
@@ -99,14 +99,14 @@ export const quizQuestions: QuizQuestion[] = [
       type: 'multiple-choice',
       options: [
         'Translating text into another language',
-        'Breaking text into smaller units (tokens)',
         'Compressing text to save storage',
-        'Encrypting text for security'
+        'Encrypting text for security',
+        'Breaking text into smaller units (tokens)'
       ],
-      correctAnswer: 'B'
+      correctAnswer: 'D'
     },
     answerExplanation: {
-      correctAnswer: 'B. Tokenization',
+      correctAnswer: 'D. Tokenization',
       details: [
         'Tokenization breaks down text into tokens — the basic units an LLM understands.',
         'Example: "This is unbelievable" → ["This", "is", "un", "believable"].',
@@ -126,15 +126,15 @@ export const quizQuestions: QuizQuestion[] = [
       text: 'Which of the following is the closest example of tokenization for modern LLMs?',
       type: 'multiple-choice',
       options: [
-        '"This is unbelievable" → ["This", "is", "unbelievable"]',
         '"This is unbelievable" → ["This", "is", "un", "believable"]',
+        '"This is unbelievable" → ["This", "is", "unbelievable"]',
         '"This is unbelievable" → ["This is unbelievable"]',
         '"This is unbelievable" → ["T", "h", "i", "s", "i", "s", "u", "n", …]'
       ],
-      correctAnswer: 'B'
+      correctAnswer: 'A'
     },
     answerExplanation: {
-      correctAnswer: 'B. Subword tokenization',
+      correctAnswer: 'A. Subword tokenization',
       details: [
         'Modern LLMs use subword tokenization to balance efficiency and flexibility.',
         'Simple words like "is" remain whole.',
@@ -155,14 +155,14 @@ export const quizQuestions: QuizQuestion[] = [
       type: 'multiple-choice',
       options: [
         'Each token is saved as an image of the word',
-        'Each token is assigned a number called a token ID',
         'Each token is stored in a dictionary of synonyms',
-        'Each token is translated into binary code manually'
+        'Each token is translated into binary code manually',
+        'Each token is assigned a number called a token ID',
       ],
-      correctAnswer: 'B'
+      correctAnswer: 'D'
     },
     answerExplanation: {
-      correctAnswer: 'B. Each token is assigned a token ID',
+      correctAnswer: 'D. Each token is assigned a token ID',
       details: [
         'Once text is tokenized, each token gets a unique integer from the model\'s vocabulary.',
         'Example: "un" → 5321, "believable" → 8742.',
@@ -234,14 +234,14 @@ export const quizQuestions: QuizQuestion[] = [
       type: 'multiple-choice',
       options: [
         'They compress text for storage',
-        'They turn each token ID into a vector that captures meaning',
         'They replace tokens with dictionary definitions',
+        'They turn each token ID into a vector that captures meaning',
         'They sort tokens in alphabetical order'
       ],
-      correctAnswer: 'B'
+      correctAnswer: 'C'
     },
     answerExplanation: {
-      correctAnswer: 'B. Embeddings turn token IDs into vectors that capture meaning',
+      correctAnswer: 'C. Embeddings turn token IDs into vectors that capture meaning',
       details: [
         'A token ID (e.g., "cat" → 5321) is just a plain number.',
         'The embedding layer maps this ID into a vector: a list of numbers like [0.12, –0.45, 0.88, …].',
@@ -291,15 +291,15 @@ export const quizQuestions: QuizQuestion[] = [
       text: 'What is a Transformer in modern LLMs?',
       type: 'multiple-choice',
       options: [
-        'A machine that translates languages word-for-word',
         'The architecture that processes tokens in parallel using self-attention',
+        'A machine that translates languages word-for-word',
         'A memory bank of training data',
         'A tool that compresses text for storage'
       ],
-      correctAnswer: 'B'
+      correctAnswer: 'A'
     },
     answerExplanation: {
-      correctAnswer: 'B. A Transformer is the architecture that processes tokens in parallel using self-attention',
+      correctAnswer: 'A. A Transformer is the architecture that processes tokens in parallel using self-attention',
       details: [
         'Transformers replaced older step-by-step models with parallel processing, speeding up training and making models scalable.',
         'The key feature is self-attention, which allows the model to connect tokens across the entire sequence.',
@@ -349,14 +349,14 @@ export const quizQuestions: QuizQuestion[] = [
       type: 'multiple-choice',
       options: [
         'The training data itself',
-        'The model\'s parameters',
         'The embeddings layer',
+        'The model\'s parameters',
         'The documents provided in the prompt'
       ],
-      correctAnswer: 'B'
+      correctAnswer: 'C'
     },
     answerExplanation: {
-      correctAnswer: 'B. The model\'s parameters',
+      correctAnswer: 'C. The model\'s parameters',
       details: [
         'Parameters are the billions (or trillions) of weights that store what the model has learned during training.',
         'They are what give an LLM its long-term knowledge.',
@@ -376,14 +376,14 @@ export const quizQuestions: QuizQuestion[] = [
       type: 'multiple-choice',
       options: [
         'A complete sentence all at once',
-        'A probability distribution over possible next tokens',
         'The most common word from training data',
-        'The entire context window back to the user'
+        'The entire context window back to the user',
+        'A probability distribution over possible next tokens'
       ],
-      correctAnswer: 'B'
+      correctAnswer: 'D'
     },
     answerExplanation: {
-      correctAnswer: 'B. An LLM outputs a probability distribution, not a finished sentence',
+      correctAnswer: 'D. An LLM outputs a probability distribution, not a finished sentence',
       details: [
         'For each step, the model lists all possible next tokens and assigns a probability to each one.',
         'Example: After the phrase "The cat sat on the", the model might assign: "mat" → 80%, "floor" → 15%, "sofa" → 5%',
@@ -403,15 +403,15 @@ export const quizQuestions: QuizQuestion[] = [
       text: 'How does an LLM decide which token to pick from its probability distribution?',
       type: 'multiple-choice',
       options: [
-        'It always chooses the first word in the dictionary',
         'It uses a setting called temperature to control how tokens are chosen',
+        'It always chooses the first word in the dictionary',
         'It memorizes sentences from training data and copies them',
         'It randomly picks any token with no rules'
       ],
-      correctAnswer: 'B'
+      correctAnswer: 'A'
     },
     answerExplanation: {
-      correctAnswer: 'B. LLMs use a setting called temperature to decide how to sample tokens from the probability distribution',
+      correctAnswer: 'A. LLMs use a setting called temperature to decide how to sample tokens from the probability distribution',
       details: [
         'Low temperature (e.g., 0.2): the model is predictable, almost always choosing the highest-probability token.',
         'High temperature (e.g., 1.0–1.5): the model is more creative, sometimes picking less likely tokens.',
